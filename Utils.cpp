@@ -50,7 +50,7 @@ String Utils::ftoa(float number, uint8_t precision) {
 /*
   Function that return a gradiant from green to red depending of the percent specified
 
-  @param 0 to 1 value reprensenting the percent
+  @param 0 to 1 value representing the percent
 */
 uint16_t Utils::getGradiantGreenToRed(double power) {
   double h = power * 0.4; // Hue (0.4 = Green)

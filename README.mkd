@@ -1,0 +1,34 @@
+MegaCluster by Sébastien Giroux
+===============================================
+
+Display device for the Megasquirt ECU
+
+Video of the device in action!
+------------------------------------------------
+http://www.youtube.com/watch?v=bEpW9m4Fqn0
+
+Hardware
+------------------------------------------------
+- chipKIT Uno32 (32-bits Arduino clone), I'm using a chipKIT since I don't know much about eletronics, that was the easiest choice [Link to RobotShop](http://www.robotshop.com/productinfo.aspx?pc=RB-Dig-14&lang=en-US)
+- 4d Systems µLCD-32PT(SGC) LCD screen (3.2") [Link to RobotShop](http://www.robotshop.com/productinfo.aspx?pc=RB-Fds-19&lang=en-US)
+- SparkFun I2C to UART board (since there is not enough UART port on the chipKIT) [Link to SparkFun](http://www.sparkfun.com/products/9981)
+- DFRboot Bluetooth adapter [Link to RobotShop](http://www.robotshop.com/productinfo.aspx?pc=RB-Dfr-10&lang=en-US)
+- Lithium Backpack [Link to LiquidWare](http://www.liquidware.com/shop/show/MBP/Lithium+Backpack)
+
+Software
+------------------------------------------------
+- C++ with the ChipKIT libraries, using rei-vilo library to communicate with the LCD and the Megasquirt class for the most part come from David Irvine. Gauge/Histogram/BarGraph/Main sketch/etc made by me.
+
+Getting started
+------------------------------------------------
+Right now, the product is pretty basic so a lot of stuff is hard coded to work for my specific setup. To make it work for your setup, you will more then likely have to modify a few things. First,
+you need to download [MPIDE](https://github.com/chipKIT32/chipKIT32-MAX). After that, you have to alter the value of RX_BUFFER_SIZE in HardwareSerial.h in the main chipKIT class because some Megasquirt Firmware
+send more then the default RX_BUFFER_SIZE value when replying to the "A" serial command. I modified mine as follow:
+
+	#define RX_BUFFER_SIZE 512
+	
+Latest current Megasquirt 3 firmware send about 403 bytes so this should be enough for a while with new firmware. Eventually, MPIDE should allow a project file in the sketch directory so we won't have to do this.
+Once this is done, most configuration that you will need to do should be in Megasquirt.h. MS_TABLE_LENGTH is the length in bytes of the "A" reply from Megasquirt for the specific firmware you're using. MS_BAUD_RATE is
+9600 for Megasquirt I and 115200 for Megasquirt II and III. USE_BLUETOOTH is set to true if you're using bluetooth (so the device will send proper AT command for pairing and connecting), false if you're using a RS232
+to UART adapter. BLUETOOTH_PIN_CODE_1 is the PIN code of the bluetooth adapter on the Megasquirt and BLUETOOTH_MS_ADDRESS_1 is the address of the adapter.
+
