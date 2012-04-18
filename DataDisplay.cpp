@@ -24,11 +24,8 @@ DataDisplay::DataDisplay(Serial_LCD *myLCD) {
 
   @param dataDisplayIndex The index of the progress bar (The first one MUST be 0!)
 */
-void DataDisplay::drawDataDisplay(uint8_t dataDisplayIndex, float value, String _units, String text) {
+void DataDisplay::drawDataDisplay(uint8_t dataDisplayIndex, String _units, String text) {
   units[dataDisplayIndex] = _units;
-  
-  // Draw value
-  //updateValue(dataDisplayIndex,value);  
   
   // Draw text
   p_myLCD->setFont(0x01);

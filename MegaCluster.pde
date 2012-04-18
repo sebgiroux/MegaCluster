@@ -211,37 +211,37 @@ void pageFourAllData() {
   /*
     Draw data display
   */
-  DataDisplay.drawDataDisplay(0,2850,"","RPM");
-  DataDisplay.drawDataDisplay(1,56,"%","TPS");
-  DataDisplay.drawDataDisplay(2,76,"kPa","MAP");
-  DataDisplay.drawDataDisplay(3,12.8,"","AFR");
-  DataDisplay.drawDataDisplay(4,13.2,"","AFR Target");
+  DataDisplay.drawDataDisplay(0,"","RPM");
+  DataDisplay.drawDataDisplay(1,"%","TPS");
+  DataDisplay.drawDataDisplay(2,"kPa","MAP");
+  DataDisplay.drawDataDisplay(3,"","AFR");
+  DataDisplay.drawDataDisplay(4,"","AFR Target");
   
-  DataDisplay.drawDataDisplay(5,3.8,"ms","PW");
-  DataDisplay.drawDataDisplay(6,22,"%","Inc.DC");
-  DataDisplay.drawDataDisplay(7,76,"kPa","MAP");
-  DataDisplay.drawDataDisplay(8,100,"%","WUE");
-  DataDisplay.drawDataDisplay(9,16,"","IAC Steps");
+  DataDisplay.drawDataDisplay(5,"ms","PW");
+  DataDisplay.drawDataDisplay(6,"%","Inc.DC");
+  DataDisplay.drawDataDisplay(7,"kPa","MAP");
+  DataDisplay.drawDataDisplay(8,"%","WUE");
+  DataDisplay.drawDataDisplay(9,"","IAC Steps");
 
-  DataDisplay.drawDataDisplay(10,13.6,"ms","Volts");
-  DataDisplay.drawDataDisplay(11,80,"F","MAT");
-  DataDisplay.drawDataDisplay(12,192,"F","CLT");
-  DataDisplay.drawDataDisplay(13,98,"%","EGO");
-  DataDisplay.drawDataDisplay(14,23.4,"ms","Loop Time");
+  DataDisplay.drawDataDisplay(10,"ms","Volts");
+  DataDisplay.drawDataDisplay(11,"F","MAT");
+  DataDisplay.drawDataDisplay(12,"F","CLT");
+  DataDisplay.drawDataDisplay(13,"%","EGO");
+  DataDisplay.drawDataDisplay(14,"ms","Loop Time");
   
-  DataDisplay.drawDataDisplay(15,3,"","TPSDot");
-  DataDisplay.drawDataDisplay(16,300,"","RPMDot");
-  DataDisplay.drawDataDisplay(17,5,"","MAPDot");
-  DataDisplay.drawDataDisplay(18,2,"","Gear");
-  DataDisplay.drawDataDisplay(19,36,"KM/H","VSS");
+  DataDisplay.drawDataDisplay(15,"","TPSDot");
+  DataDisplay.drawDataDisplay(16,"","RPMDot");
+  DataDisplay.drawDataDisplay(17,"","MAPDot");
+  DataDisplay.drawDataDisplay(18,"","Gear");
+  DataDisplay.drawDataDisplay(19,"KM/H","VSS");
   
-  DataDisplay.drawDataDisplay(20,108,"%","Gair");
-  DataDisplay.drawDataDisplay(21,96,"%","Gbaro");
-  DataDisplay.drawDataDisplay(22,102,"%","Gwarm");
-  DataDisplay.drawDataDisplay(23,2.4,"ms","Dwell");
-  DataDisplay.drawDataDisplay(24,18,"","Current");
+  DataDisplay.drawDataDisplay(20,"%","Gair");
+  DataDisplay.drawDataDisplay(21,"%","Gbaro");
+  DataDisplay.drawDataDisplay(22,"%","Gwarm");
+  DataDisplay.drawDataDisplay(23,"ms","Dwell");
+  DataDisplay.drawDataDisplay(24,"","Current");
  
-  DataDisplay.drawDataDisplay(25,28.6,"","MPG");
+  DataDisplay.drawDataDisplay(25,"","MPG");
 }
 
 void pageFiveDatalogging() {
