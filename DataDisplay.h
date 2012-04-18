@@ -14,7 +14,7 @@
 class DataDisplay {
   public:
     DataDisplay(Serial_LCD *p_myLCD);
-    void drawDataDisplay(uint8_t barGraphIndex, float value, String units, String text);
+    void drawDataDisplay(uint8_t barGraphIndex, String units, String text);
     void updateValue(uint8_t barGraphIndex,float value,boolean force);
     
   private:
